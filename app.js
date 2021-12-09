@@ -222,16 +222,40 @@
 
 // alert ("El equivalente en segundos es " + segundos);
 
-//-----------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------------
 
 // 2) Solicitar al usuario que ingrese la cantidad de kilómetros que desea recorrer con su motocicleta. 
 // A continuación solicitar la velocidad promedio a la que desea ir en kilómetros por hora. 
 // Calcular el tiempo estimado en llegar a destino en minutos.  A tener en cuenta: 
-// la velocidad se calcula en metros sobre segundos!)
+// la velocidad se calcula en metros sobre segundos! D=v*t t=d/v
 
-let kilometros = parseFloat(prompt("Ingrese la cantidad de km a recorrer"));
+// let kilometros = parseFloat(prompt("Ingrese la cantidad de km a recorrer"));
 
-let velocidadPromedio = parseFloat(prompt("Ingrese la velocidad promedio a lauqe desea ir"));
+// let velocidadPromedio = parseFloat(prompt("Ingrese la velocidad promedio a la que desea ir"));
+
+// let minutos = (kilometros/velocidadPromedio)*60;
+
+// alert("El tiempo estimado en llegada es de " + minutos + " minutos");
+
+//---------------------------------------------------------------------------------------------------------
+
+// 3) Realizar una calculadora de sueldo neto.Se solicita ingresar el sueldo bruto y se descuenta:
+// Obra social 3 %, jubilación 11 %, Ley 19032 3 %.Mostrar el monto de cada una de las deducciones y el monto final.
+//No contempla impuesto a las ganancias ni sindicatos.
+//     ej: Sueldo bruto: $70.000
+// Deducciones:
+//     Obra social: $2100
+//     Ley 19032: $2100
+//     Jubilación: $7700
+//     Neto a pagar: $58100
+
+let sueldoBruto = parseFloat(prompt("Ingrese sueldo bruto y se harán sus descuentos"));
+
+let obraSocialyLey = (sueldoBruto*3)/100;
+let jubilacion = (sueldoBruto*11)/100;
+let sueldoNeto = sueldoBruto - ((obraSocialyLey*2)+jubilacion);
+
+alert("Obra social: " + obraSocialyLey + "\nLey 19032: " + obraSocialyLey + "\nJubilación: " + jubilacion + "\nSueldo neto: " + sueldoNeto);
 
 
 
